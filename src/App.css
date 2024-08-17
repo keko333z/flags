@@ -1,0 +1,169 @@
+.app-container{
+  width: 60%;
+  margin-left: 20%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  min-height: 800px;
+  background-color: rgb(255, 255, 255);
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+  flex-direction: column;
+  border-radius: 20px; 
+}
+
+.header{
+  width: 100%;
+  height: 120px;
+  background-color: cornflowerblue;
+  border-radius: 20px  20px 0px 0px;
+  font-size: large;
+  font-family: Helvetica, sans-serif;
+  color: white;
+  text-align: center; 
+}
+
+
+.home-link{
+  background-color: rgb(255, 255, 255);
+}
+
+.body{
+  width: 100%;
+  min-height: 600px;
+  margin-top: 20px;
+}
+
+.form{
+  width: 40%;
+  margin-left: 30%;
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: flex-start;
+  gap: 15px;
+  font-size: xx-large;
+  font-family: fantasy;
+}
+.new-game-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2%;
+  width: 90%;
+  margin-left: 3%;
+  margin-top: 2%;
+}
+.home-link{
+  align-self: flex-start;
+}
+.countries-grid{
+  display: grid;
+  grid-template-columns: repeat(5, 18%);
+  grid-template-rows: repeat(5, 120px);
+  gap: 3%;
+}
+.total-clicks{
+  width: 30%;
+  margin-left: 17%;
+  margin-top: 4%;
+  padding-top: 3%;
+}
+
+.single-flag-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.single-flag{
+  width: 100%;
+  height: 70px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+.single-flag-disabled{
+  width: 91%;
+  height: 70px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  opacity: 0.4;
+  pointer-events: none;
+  animation-name: rotate;
+  animation-duration: 200ms;
+}
+.single-flag:hover{
+  opacity: 90%;
+  /*width: 93%;*/
+ /*height: 73px;*/
+  animation-name: spin;
+  animation-duration: 500ms;
+}
+.final-message-container{
+  position: absolute;
+  width: 30%;
+  left: 35%;
+  top: 45%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 30%;
+  background: url("https://cdn.pixabay.com/photo/2017/01/31/20/22/earth-2026996_640.png");
+  background-repeat: no-repeat;
+  background-size:contain;
+  background-position: center;
+  opacity: 0.9;
+}
+
+.final-message{
+ /* position: absolute;
+  left: 43%;
+  top: 30%;*/
+  margin-top: 15%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content:end;
+  width: 100%;
+  color: rgb(0, 0, 0);
+  font-weight: bolder;
+  font-size: 0.8em;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  
+}
+.final-message-button{
+  position: absolute;
+  width: 35%;
+  left: 32.5%;
+}
+
+@keyframes spin {
+  25% {transform:rotate(5deg);}
+  50% {transform:rotate(-5deg);}
+}
+
+@keyframes rotate {
+  50% {transform:rotate(-360deg);}
+}
+
+.country-name{
+  font-weight: bold;
+  font-size: small;
+}
+
+@media (max-width: 800px) {
+  .app-container{
+    width: 100%;
+    margin-left: 0;
+  }
+  .final-message{
+    font-size: 0.6em;
+    margin-top: 30%;
+  }
+  .countries-grid{
+    grid-template-rows: repeat(5, 140px);
+  }
+  .final-message-container{
+    width: 40%;
+    left: 30%;
+  }
+ 
+}
