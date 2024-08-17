@@ -7,7 +7,7 @@ interface Props {
 export const FinalMessage = ({finished, clicks} : Props)=>{
 
     const handleClick = () => {
-        window.location.href = "/flags"
+        window.location.href = "/flags/"
     }
 
     return (
