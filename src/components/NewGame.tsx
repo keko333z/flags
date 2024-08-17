@@ -25,7 +25,7 @@ export const NewGame = ({countriesArray, cToGuess,  setCToGuess} : Props) => {
 
     return (
     <div className="new-game-container">
-         <a className="home-link" href="/flags">Exit</a>
+         <a className="home-link" href="/flags/">Exit</a>
         {finished ? "" : <p><strong>What is the flag of: {cToGuess}</strong></p>}
         <div className="countries-grid">
     
