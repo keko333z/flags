@@ -61,8 +61,9 @@
 .countries-grid{
   display: grid;
   grid-template-columns: repeat(5, 18%);
-  grid-template-rows: repeat(5, 120px);
+  grid-template-rows: repeat(5, 118px);
   gap: 3%;
+  margin-top: 10px;
 }
 .total-clicks{
   width: 30%;
