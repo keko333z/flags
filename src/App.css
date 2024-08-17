@@ -94,8 +94,6 @@
 }
 .single-flag:hover{
   opacity: 90%;
-  /*width: 93%;*/
- /*height: 73px;*/
   animation-name: spin;
   animation-duration: 500ms;
 }
