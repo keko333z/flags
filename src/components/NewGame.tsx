@@ -26,7 +26,7 @@ export const NewGame = ({countriesArray, cToGuess,  setCToGuess} : Props) => {
     return (
     <div className="new-game-container">
          <a className="home-link" href="/flags/">Exit</a>
-        {finished ? "" : <p><strong>What is the flag of: {cToGuess}</strong></p>}
+        {finished ? <p></p> : <p><strong>What is the flag of: {cToGuess}</strong></p>}
         <div className="countries-grid">
     
         { countriesArray ?  countriesArray.map((c: Country ) => <div  key={c.name.common}><Flag country={c}  nameToGuess={cToGuess} newArray={newArray} setNewArray={setNewArray} setCToGuess={setCToGuess} setClicks={setClicks} setFinished={setFinished} /></div>) : "Loading..."}
